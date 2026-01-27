@@ -16,7 +16,7 @@ dependencies {
     // FixtureMonkey
     api("com.navercorp.fixturemonkey:fixture-monkey-starter:1.1.15")
     // Jqwik
-    api("net.jqwik:jqwik:1.8.0")
+    api("net.jqwik:jqwik:1.7.3")
 }
 
 tasks.test {

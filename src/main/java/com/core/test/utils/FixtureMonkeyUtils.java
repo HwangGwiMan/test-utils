@@ -2,7 +2,7 @@ package com.core.test.utils;
 
 import com.navercorp.fixturemonkey.FixtureMonkey;
 import com.navercorp.fixturemonkey.FixtureMonkeyBuilder;
-import com.navercorp.fixturemonkey.api.introspector.ConstructorPropertiesArbitraryIntrospector;
+import com.navercorp.fixturemonkey.api.introspector.BeanArbitraryIntrospector;
 import com.navercorp.fixturemonkey.jakarta.validation.plugin.JakartaValidationPlugin;
 
 public abstract class FixtureMonkeyUtils {
@@ -11,7 +11,7 @@ public abstract class FixtureMonkeyUtils {
     static {
         FixtureMonkeyBuilder fixtureMonkeyBuilder = FixtureMonkey.builder()
                 .plugin(new JakartaValidationPlugin())
-                .objectIntrospector(ConstructorPropertiesArbitraryIntrospector.INSTANCE); // 생성자 기반 생성
+                .objectIntrospector(BeanArbitraryIntrospector.INSTANCE);
 
         /**
          * builder.register로 타입 별로 기본 생성 조건을 설정할 수 있음.
